@@ -116,11 +116,27 @@ ll operator^(const Vector &v1, const Vector &v2){
 
 
 ostream& operator<<(ostream &c, const Vector &v){
-    return (c << v.x << " " << v.y);
+    return (c << "(" << v.x << " " << v.y << ")");
 }
 
 
 int main() {
-
+    ll x1, y1, x2, y2, a;
+    cout << "Type v1 vector coords:";
+    cin >> x1 >> y1;
+    cout << "Type v2 vector coords:";
+    cin >> x2 >> y2;
+    cout << "Type number a:";
+    cin >> a;
+    Vector v1(x1, y1), v2(x2, y2);
+    cout << "v1 + v2 = " << v1 + v2 << "\n";
+    cout << "v1 - v2 = " << v1 - v2 << "\n";
+    cout << "v1 * a = " << v1 * a << "\n";
+    cout << "v2 * a = " << v2 * a << "\n";
+    cout << "v1 * v2 = " << (v1 * v2) << "\n";
+    cout << "v1 ^ v2 = " << (v1 ^ v2) << "\n";
+    cout << "v1 == v2 = " << (v1 == v2) << "\n";
+    cout << "v1 != v2 = " << (v1 != v2) << "\n";
+    cout << "Angle: " << v1.angle_to(v2) << "\n";
     return 0;
 }
